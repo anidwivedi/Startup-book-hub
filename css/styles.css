@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #001F3F; /* Navy */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #FF4500; /* Orange Red */
+    --neutral-color: #F8F8F8; /* Ghost White */
+    --text-color: #2F4F4F; /* Dark Slate Grey */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.hero {
+    background: url('/images/hero-background.jpg') no-repeat center center/cover;
+    height: 400px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+}
+h3,p{
+    padding: 1rem;
+}
+
+section {
+    margin: 2em 0;
+    padding: 0 1em;
+}
+
+.featured-books article, .latest-posts article {
+    background: var(--secondary-color);
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content stays within the box */
+    display: flex;
+    align-items: center;
+}
+
+.featured-books img, .latest-posts img {
+    max-width: 100px; /* Ensure images fit within the container */
+    height: auto;
+    margin-right: 1em;
+    border-radius: 5px;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type="email"] {
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid var(--primary-color);
+}
+
+form button {
+    padding: 0.5em;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-content {
+        padding: 1em;
+    }
+
+    .featured-books img, .latest-posts img {
+        float: none;
+        display: block;
+        margin: 0 auto 1em auto;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input[type="email"], form button {
+        margin: 0.5em 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero {
+        height: 250px;
+    }
+
+    .hero-content {
+        padding: 0.5em;
+        font-size: 14px;
+    }
+
+    .featured-books article, .latest-posts article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-books img, .latest-posts img {
+        margin: 0 0 1em 0;
+    }
+
+    form input[type="email"], form button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .hero-content {
+        padding: 0.5em;
+        font-size: 12px;
+    }
+
+    .featured-books article, .latest-posts article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-books img, .latest-posts img {
+        margin: 0 0 1em 0;
+    }
+
+    form input[type="email"], form button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    .hero {
+        height: 150px;
+    }
+
+    .hero-content {
+        padding: 0.5em;
+        font-size: 10px;
+    }
+
+    .featured-books article, .latest-posts article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-books img, .latest-posts img {
+        margin: 0 0 1em 0;
+    }
+
+    form input[type="email"], form button {
+        font-size: 10px;
+    }
+}
